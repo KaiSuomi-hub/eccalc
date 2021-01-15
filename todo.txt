@@ -1,0 +1,7 @@
+miten saa select kentästä arvon? googleta
+
+miten saa lisää ravinnekenttiä dynaamisesti poistettua ja vähennettyä?
+
+onko mahdollista laittaa ph muuttujaa eli value 2?
+
+desimaaleja liikaa tuloksessa.
