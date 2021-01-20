@@ -1,4 +1,5 @@
 import React from "react";
+
 // import Select from "./Select";
 const options = [
   { label: "Valitse", value: 0.0 },
@@ -19,6 +20,8 @@ const options = [
 ];
 
 class Form extends React.Component {
+  // edited
+  state = { showing: true };
   constructor(props) {
     super(props);
     this.state = {
@@ -83,11 +86,12 @@ class Form extends React.Component {
         this.state.a +
       this.state.b;
     const ppm = result * 700;
+    const { showing } = this.state;
 
     return (
       <div className="form">
         <h1>Add a substance</h1>
-        <form action="">
+        {/* <form action=""> */}
           <label htmlFor="litres"> Water amount in liters </label>
           <input
             onChange={this.handleChange}
@@ -107,6 +111,11 @@ class Form extends React.Component {
           <div>
             <p>Nute amount </p>
           </div>
+          
+          {/* ****LEIKKAA TäSTä**** */}
+          <button onClick={() => this.setState({ showing: !showing })}>Lisää ravinteita</button><br/>
+                { showing 
+                    ? <div>
           {/* ****RIVI1**** */}
 
           <input
@@ -538,7 +547,11 @@ class Form extends React.Component {
           {/* ****TäHäN ASTI**** */}
 
           {/* ****LEIKKAA TäSTä**** */}
-
+{/* edited */}
+</div>
+                    : null
+                }
+              
           {/* ****RIVI14**** */}
 
           <input
@@ -602,7 +615,7 @@ class Form extends React.Component {
           <br />
 
           {/* ****TäHäN ASTI**** */}
-        </form>
+        {/* </form> */}
         <br />
         <br />
         <p className="tulos">
